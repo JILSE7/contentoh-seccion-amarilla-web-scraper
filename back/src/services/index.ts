@@ -5,6 +5,8 @@ import { CustomError } from '../utilities/customError.utilities';
 const SA_URL = 'https://www.seccionamarilla.com.mx'
 
 export const SearchRestaurantService = async(location: string) => {
+  if(location.length === 0) throw new CustomError(`Ciudad invalida, porfavor ingrese una ciudad`, 404)
+
   const browser = await chromium.launch();
   const page = await browser.newPage();
 
