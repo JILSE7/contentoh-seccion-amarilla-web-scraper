@@ -19,7 +19,8 @@ export const SearchRestaurantService = async(location: string) => {
   await page.screenshot({path: 'taf2.png'})
   const searchButton = await page.$(".search-btn");
   searchButton?.click();
-  await page.waitForSelector(".list li");
+  // await page.waitForSelector(".list li");
+  await page.waitForTimeout(6000);
   const productsHTML = await page.$$(".list li")
   
   const bestRestaurants: Restaurant[] = [];
