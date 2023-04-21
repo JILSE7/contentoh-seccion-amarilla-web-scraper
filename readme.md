@@ -36,13 +36,22 @@ $ git clone https://github.com/JILSE7/contentoh-challenge.git
 ```
 * Instala los paquetes que necesita tanto el front como el back
 ```
-$ yarn
+$ cd front
+  yarn install
+
+$ cd back
+  yarn install
 ```
 * Ejecuta en ambas apps el comando para correr en modo desarrollo:
 ```
+$ cd front
+$ yarn dev
+
+$ cd back
 $ yarn dev
 ```
 * Busca una ciudad para obtener sus resultados
+* Se feliz :D
 
 
 ## Autores ✒️
