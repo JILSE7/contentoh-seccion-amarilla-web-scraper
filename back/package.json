@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --files ./src/app.ts"
+    "dev": "nodemon --files ./src/app.ts",
+    "build": "tsc --build && cp .env ./dist/.env",
+    "serve": "nodemon ./dist/app.js"
   },
   "keywords": [],
   "author": "",
